@@ -4,9 +4,9 @@
         <title>Playing with css amination keyframes</title>
         <meta charset="utf-8">
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
-        
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/styles.css">
+        <script src="node_modules/knockout/build/output/knockout-latest.js"></script>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="css/styles.css"></link>
     </head>
     <body>
         <div class="container">
@@ -14,7 +14,7 @@
                 <div class="cols-md-12 content">
                     <div class="fejlIDb alert-danger">
                         <div class="fejlContent">
-                            <div class="closeButton"></div>
+                            <div class="closeButton">X</div>
                             Her står en fejlbesked.
                         </div>
                     </div>
@@ -25,5 +25,11 @@
 
             </div>
         </div>
+        <script type="text/javascript">
+            setTimeout(
+                () => {
+                    $('.fejlIDb').addClass('in');
+                }, 2000);
+        </script>
     </body>
 </html>
