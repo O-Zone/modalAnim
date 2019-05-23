@@ -9,7 +9,6 @@ body{
         background-color:#fff;
         position: relative;
 
-
         .fejlIDb{
             visibility: hidden;
             opacity: 0;
@@ -18,12 +17,31 @@ body{
             right:10px;
             top: 10px;
             bottom: 10px;
-            transition: visible 0s ease 0.5s, opacity 0.3s ease;
+            width: ~"calc(100% - 20px)";
+            height: ~"calc(100% - 20px)";
+            transition: visible 0s ease 0.6s, opacity 0.6s ease;
             cursor:pointer;
+            .fejlContent{
+                text-align:center;
+                margin-top:32px;
+            }
             &.in{
                 visibility:visible;
                 opacity: 1;
                 transition-delay: 0s;
+            
+                &.zoomout{
+                    visibility:hidden;
+                    opacity:0;
+                    top:35px;
+                    left: 145px;
+                    width: 100px;
+                    height: 35px;
+                    transition: visibility 0s ease 0.6s, opacity 0.6s ease, width 0.6s ease, height 0.6s ease, top 0.6s ease, left 0.6s ease;
+                    .fejlContent{
+                        display:none;
+                    }
+                }
             }
            
             .closeButton{
